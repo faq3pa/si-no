@@ -3,9 +3,10 @@
   <head>
     <title>Si-No</title>
     <link type="text/css" rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <{{ fontfam|safe }}>
   </head>
-  <body style="background-color:{{ backgroundcolor|safe }};color:{{ fontcolor|safe }};">
-    <p>{{ time|safe }}</p>
+  <body style="background-color:{{ backgroundcolor|safe }};color:{{ fontcolor|safe }};{{ fontstyle|safe }}">
+    <p onClick="window.location.reload();">{{ time|safe }}</p>
+    
   </body>
 </html>
